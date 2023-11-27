@@ -63,10 +63,7 @@
         "hole_clearance|166312500|89587500|a739f73a-a0bd-4948-8606-c3cf2bdc9220|ccac0a8e-f22b-4433-8d3f-06aee9fbccd2",
         "hole_clearance|166312500|92412500|adcf1958-65e6-4176-9cc7-a86d42660efb|65eb296b-5013-4bf7-a697-3482e7fb9e37",
         "hole_clearance|167325000|88875000|a739f73a-a0bd-4948-8606-c3cf2bdc9220|02e6d321-47ae-4332-abb3-e04c46ece613",
-        "hole_clearance|167325000|93125000|adcf1958-65e6-4176-9cc7-a86d42660efb|6f3ae672-a99a-4eab-a8d2-5a6a3a7f7777",
-        "holes_co_located|133411543|82000000|6148fcb2-98f8-45ba-bfc0-d7f6ec65e02e|e3c13856-8960-4f79-b4cc-fff3cbba4c61",
-        "holes_co_located|158000000|106588457|25377929-d4a6-48e8-95fb-4fc16af5ece6|fb411b92-fb93-47e6-bb5b-e8ef51313237",
-        "holes_co_located|164588457|82000000|70999db7-0c49-413e-ae52-64cd0cc1f6d7|7a1c714c-7465-431b-a452-361c06003b27"
+        "hole_clearance|167325000|93125000|adcf1958-65e6-4176-9cc7-a86d42660efb|6f3ae672-a99a-4eab-a8d2-5a6a3a7f7777"
       ],
       "meta": {
         "version": 2
