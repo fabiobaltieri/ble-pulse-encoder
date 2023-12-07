@@ -461,7 +461,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "ble-pulse-encoder.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
