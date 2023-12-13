@@ -8,6 +8,10 @@
 	model = "BLE Pulse Encoder";
 	compatible = "balto,ble-pulse-encoder";
 
+	zephyr,user {
+		chrg-gpios = <&gpio0 11 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+	};
+
 	chosen {
 		zephyr,console = &uart0;
 		zephyr,shell-uart = &uart0;
