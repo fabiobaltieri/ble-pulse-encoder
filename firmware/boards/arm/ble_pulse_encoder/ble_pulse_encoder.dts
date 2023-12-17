@@ -45,10 +45,10 @@
 
 	gpio_qdec: gpio-qdec {
 		compatible = "gpio-qdec";
-		gpios = <&gpio0 13 GPIO_ACTIVE_LOW>,
-			<&gpio0 17 GPIO_ACTIVE_LOW>;
-		led-gpios = <&gpio0 14 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_S0H1)>,
-			    <&gpio0 15 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_S0H1)>;
+		gpios = <&gpio0 17 GPIO_ACTIVE_LOW>,
+			<&gpio0 13 GPIO_ACTIVE_LOW>;
+		led-gpios = <&gpio0 15 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_S0H1)>,
+			    <&gpio0 14 (GPIO_ACTIVE_HIGH | NRF_GPIO_DRIVE_S0H1)>;
 		led-pre-us = <4>;
 		steps-per-period = <4>;
 		zephyr,axis = <INPUT_REL_WHEEL>;
