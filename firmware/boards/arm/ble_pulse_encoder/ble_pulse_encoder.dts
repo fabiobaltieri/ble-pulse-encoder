@@ -79,7 +79,7 @@
 		zephyr,gain = "ADC_GAIN_1_4";
 		zephyr,reference = "ADC_REF_INTERNAL";
 		zephyr,acquisition-time = <ADC_ACQ_TIME(ADC_ACQ_TIME_MICROSECONDS, 40)>;
-		zephyr,input-positive = <NRF_SAADC_AIN6>;
+		zephyr,input-positive = <NRF_SAADC_AIN3>;
 		zephyr,resolution = <10>;
 	};
 };
