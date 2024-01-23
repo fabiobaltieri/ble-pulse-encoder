@@ -58,7 +58,7 @@ static void blinker_thread(void)
 			break;
 		case BLINK_DISCONNECTED:
 			led_on(leds, LED_SYSTEM);
-			k_sleep(K_MSEC(200));
+			k_sleep(K_MSEC(300));
 			led_off(leds, LED_SYSTEM);
 			break;
 		case BLINK_UNPAIRED:
