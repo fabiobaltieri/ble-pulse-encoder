@@ -33,13 +33,13 @@
 
 	buttons: buttons {
 		compatible = "gpio-keys";
-		wkup1: button_analog {
+		wkup1: sw_a {
 			gpios = <&gpio0 22 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-			zephyr,code = <INPUT_BTN_LEFT>;
-		};
-		wkup2: button_select {
-			gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
 			zephyr,code = <INPUT_BTN_RIGHT>;
+		};
+		wkup2: sw_b {
+			gpios = <&gpio0 10 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+			zephyr,code = <INPUT_BTN_LEFT>;
 		};
 	};
 
