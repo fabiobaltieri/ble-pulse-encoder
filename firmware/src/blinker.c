@@ -35,6 +35,10 @@ static void blinker_thread(void)
 		return;
 	}
 
+	led_on(leds, LED_SYSTEM);
+	k_sleep(K_MSEC(100));
+	led_off(leds, LED_SYSTEM);
+
 	while (true) {
 		ret = k_msgq_get(&blinker_msgq, &event, K_FOREVER);
 		if (ret) {
@@ -72,6 +76,4 @@ static void blinker_thread(void)
 	}
 }
 
-K_THREAD_DEFINE(blinker, 384, blinker_thread,
-		NULL, NULL, NULL,
-		7, 0, 0);
+K_THREAD_DEFINE(blinker, 384, blinker_thread, NULL, NULL, NULL, 7, 0, 0);
