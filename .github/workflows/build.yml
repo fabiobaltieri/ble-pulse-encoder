@@ -33,3 +33,9 @@ jobs:
       - name: Build
         run: |
           west build firmware -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE="\"ble-pulse-encoder-key.pem\""
+
+      - name: Firmware artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware
+          path: build/zephyr/zephyr.signed.bin
