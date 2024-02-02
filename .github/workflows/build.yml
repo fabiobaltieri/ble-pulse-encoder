@@ -1,0 +1,35 @@
+name: Firmware build
+
+on:
+  push:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Zephyr project
+        uses: zephyrproject-rtos/action-zephyr-setup@main
+        with:
+          app-path: firmware
+          toolchains: arm-zephyr-eabi
+
+      - name: Save the MCUboot key
+        env:
+          MCUBOOT_SIGNATURE_KEY: ${{ secrets.MCUBOOT_SIGNATURE_KEY }}
+        run: |
+          cat > ble-pulse-encoder-key.pem <<< $MCUBOOT_SIGNATURE_KEY
+
+      - name: Build
+        run: |
+          west build firmware -DCONFIG_MCUBOOT_SIGNATURE_KEY_FILE="\"ble-pulse-encoder-key.pem\""
