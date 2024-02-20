@@ -1,8 +1,5 @@
 if BOARD_BLE_PULSE_ENCODER
 
-config BOARD
-	default "ble_pulse_encoder"
-
 config BT_CTLR
 	default BT
 
