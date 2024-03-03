@@ -7,9 +7,9 @@
 
 LOG_MODULE_REGISTER(blinker, LOG_LEVEL_INF);
 
-static const struct device *leds = DEVICE_DT_GET_ONE(gpio_leds);
-
-#define LED_SYSTEM DT_NODE_CHILD_IDX(DT_NODELABEL(system))
+#define LED_SYSTEM_NODE DT_NODELABEL(system)
+#define LED_SYSTEM DT_NODE_CHILD_IDX(LED_SYSTEM_NODE)
+static const struct device *leds = DEVICE_DT_GET(DT_PARENT(LED_SYSTEM_NODE));
 
 #define BLINKER_QUEUE_SZ 10
 

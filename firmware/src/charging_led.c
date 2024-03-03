@@ -6,11 +6,11 @@
 
 LOG_MODULE_REGISTER(charging_led, LOG_LEVEL_INF);
 
-static const struct device *leds = DEVICE_DT_GET_ONE(gpio_leds);
+static const struct gpio_dt_spec chrg = GPIO_DT_SPEC_GET(DT_PATH(zephyr_user), chrg_gpios);
 
-static const struct gpio_dt_spec chrg = GPIO_DT_SPEC_GET( DT_PATH(zephyr_user), chrg_gpios);
-
-#define LED_CHARGING DT_NODE_CHILD_IDX(DT_NODELABEL(charging))
+#define LED_CHARGING_NODE DT_NODELABEL(charging)
+#define LED_CHARGING DT_NODE_CHILD_IDX(LED_CHARGING_NODE)
+static const struct device *leds = DEVICE_DT_GET(DT_PARENT(LED_CHARGING_NODE));
 
 static void charging_led_handler(struct k_work *work);
 
