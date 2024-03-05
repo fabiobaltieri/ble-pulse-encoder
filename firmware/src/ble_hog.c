@@ -163,7 +163,7 @@ static void ble_hog_set_key_mouse(uint16_t code, uint32_t value)
 		bit = 1;
 		break;
 	case INPUT_BTN_MIDDLE:
-		bit = 1;
+		bit = 2;
 		break;
 	default:
 		return;
