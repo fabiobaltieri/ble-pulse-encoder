@@ -1,5 +1,0 @@
-board:
-  name: ble_pulse_encoder
-  vendor: balto
-  socs:
-    - name: nrf52832
